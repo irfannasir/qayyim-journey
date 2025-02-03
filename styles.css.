@@ -1,0 +1,116 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1d1d1d;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #f39c12;
+}
+
+.title p {
+    font-size: 1.2rem;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+/* Specific Section Styling */
+.intro {
+    background-color: #2c3e50;
+}
+
+.story {
+    background-color: #34495e;
+}
+
+.vision {
+    background-color: #16a085;
+}
+
+.challenge {
+    background-color: #e74c3c;
+}
+
+.final {
+    background-color: #9b59b6;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.8rem;
+}
+
+/* Animation */
+section.visible {
+    opacity: 1;
+}
+
+/* Glitch effect */
+.glitch {
+    font-family: 'Courier', monospace;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+    display: inline-block;
+}
+
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: red;
+    background: blue;
+    clip-path: inset(0 0 0 0);
+    animation: glitch 1s infinite linear;
+}
+
+@keyframes glitch {
+    0% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(0);
+    }
+    50% {
+        clip-path: inset(5% 0 15% 0);
+        transform: translate(-5px, 5px);
+    }
+    100% {
+        clip-path: inset(0 0 0 0);
+        transform: translate(0);
+    }
+}
